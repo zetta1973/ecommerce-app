@@ -1,0 +1,11 @@
+<h2>Mis pedidos</h2>
+<ul>
+  <li *ngFor="let order of orders">
+    Pedido #{{ order.id }} - {{ order.createdAt | date:'short' }}
+    <ul>
+      <li *ngFor="let p of order.products">
+        {{ p.name }} - {{ p.price | currency:'EUR' }}
+      </li>
+    </ul>
+  </li>
+</ul>

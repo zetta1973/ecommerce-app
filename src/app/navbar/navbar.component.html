@@ -1,0 +1,6 @@
+<nav>
+  <a routerLink="/products">Productos</a>
+  <a routerLink="/orders" *ngIf="isLoggedIn()">Mis pedidos</a>
+  <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+  <app-logout *ngIf="isLoggedIn()"></app-logout>
+</nav>
